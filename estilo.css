@@ -1,0 +1,301 @@
+/* ==========================================
+   1. CONFIGURAÇÕES GERAIS
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* ==========================================
+   2. CABEÇALHO (TOPO)
+   ========================================== */
+header {
+    width: 100%;
+    background: url('imagem/fundo-motanha.jpg') center/cover no-repeat;
+    background-color: #0d2f5e;
+    height: 140px; /* Reduzido de 190px para 140px */
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(90deg, rgba(1,36,86,1) 0%, rgba(1,36,86,0.9) 40%, rgba(0,0,0,0) 100%);
+}
+
+#topo {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2%;
+    position: relative; 
+    z-index: 2;
+}
+
+#topo h1 {
+    font-size: 40px; /* Reduzido para ficar proporcional */
+    color: #f9f9f9;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+#topo h1 .destaque-amarelo {
+    color: #ffc107;
+}
+
+#topo img {
+    height: 110px; /* Reduzido para encaixar bem no topo menor */
+    width: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-right: 50px;
+}
+
+/* ==========================================
+   3. MENU SUPERIOR
+   ========================================== */
+.menu {
+    width: 100%;
+    background-color: rgba(201, 5, 5, 0.884);
+    padding: 8px 10px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 80px; /* Reduzido de 70px para os itens não quebrarem de linha */
+    flex-wrap: wrap;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px; /* Reduzido para caber perfeitamente numa linha */
+    font-weight: bold;
+}
+
+.active {
+    background-color: rgba(255, 217, 0, 0.692);
+    padding: 4px 14px;
+    border-radius: 4px;
+}
+
+/* ==========================================
+   4. TEXTO DE INTRODUÇÃO
+   ========================================== */
+.introducao-chile {
+    padding: 30px 2% 10px 2%;
+    width: 100%;
+}
+
+.conteudo-introducao {
+    max-width: 100%;
+    color: black;
+}
+
+.conteudo-introducao h2 {
+    font-size: 26px; /* Reduzido de 36px */
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+    color:#0d2f5e
+}
+
+.conteudo-introducao p {
+    font-size: 15px; /* Reduzido de 17px/19px para uma leitura limpa */
+    line-height: 1.5;
+    margin-bottom: 12px;
+    text-align: justify;
+}
+
+/* ==========================================
+   5. CARTÕES
+   ========================================== */
+#conteudo-home {
+    width: 100%;
+    margin: 30px auto;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: stretch; 
+    flex-wrap: wrap; 
+    gap: 12px; 
+    padding: 0 2%; 
+}
+
+.cartao {
+    border: 1px solid #CCC;
+    border-radius: 10px;
+    flex: 1; 
+    min-width: 160px; 
+    background-color: #ffffff;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none; 
+    color: inherit; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cartao:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+#conteudo-home img {
+    width: 100%;
+    height: 160px; /* Altura reduzida para as imagens dos cartões não ficarem gigantes */
+    object-fit: cover;    
+    border-radius: 10px 10px 0 0;
+    display: block;
+}
+
+.cartao h3 {
+    font-size: 14px; /* Reduzido para caber bem no cartão */
+    color: #0d2f5e;
+    margin: 10px 6px 4px 6px;
+    text-decoration: none;
+}
+
+.cartao p {
+    font-size: 11px; /* Texto interno do cartão menor e elegante */
+    color: #444;
+    margin: 0 8px 10px 8px;
+    line-height: 1.3;
+    flex-grow: 1;
+    text-decoration: none;
+}
+
+/* Botão "Saiba mais" se houver */
+.btn-saiba-mais {
+    display: inline-block;
+    align-self: center;
+    margin-bottom: 12px;
+    padding: 5px 12px;
+    background-color: #0d2f5e;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+/* ==========================================
+   6. RODAPÉ E PÁGINAS INTERNAS
+   ========================================== */
+footer {
+    width: 100%;
+    background-color: rgba(201, 5, 5, 0.884);
+    text-align: center;
+    font-style: italic;
+    color: #FFF;
+    padding: 12px 0;
+    margin-top: 50px;
+    font-size: 13px;
+}
+/* ==========================================
+   AJUSTE DE IMAGENS GRANDES NAS PÁGINAS INTERNAS
+   ========================================== */
+#conteudo-interno {
+    width: 100%;
+    margin: 30px auto;
+    padding: 0 2%; /* Aplica 2% de margem em ambos os lados */
+    box-sizing: border-box;
+}
+
+.secao-destino {
+    width: 100%;
+    clear: both;
+    margin-bottom: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.secao-destino h3 {
+    width: 100%;
+    color: #0d2f5e;
+    font-size: 20px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #c90505; /* Linha vermelha grossa e destacada */
+    padding-bottom: 6px;
+}
+
+/* Caixa da foto (Lado Esquerdo) */
+.secao-destino .foto {
+    flex: 0 0 45%; /* Ocupa quase metade da tela à esquerda */
+    min-width: 300px;
+    margin: 0;
+    float: none;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+/* Imagem grande e destacada */
+.secao-destino .foto img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Caixa de texto (Lado Direito) */
+.secao-destino .texto-destino {
+    flex: 1;
+    min-width: 300px;
+    padding-left: 30px; /* Respiro entre a foto e o texto */
+}
+
+.secao-destino .texto-destino p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+    text-align: justify;
+}
+
+.legenda {
+    text-align: center;
+    font-size: 12px;
+    color: #555;
+    margin-top: 6px;
+    font-style: italic;
+}
+.voltar {
+    font-size: 14px;
+    font-style: italic;
+    color: #0d2f5e;
+    display: block;
+    width: 100%;
+    text-align: center; /* Centraliza o texto perfeitamente no meio */
+    padding: 30px 0;
+    clear: both;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.voltar:hover {
+    text-decoration: underline;
+}
